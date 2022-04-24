@@ -75,10 +75,10 @@ for new_list_v2 in [new_list_1_v2, new_list_2_v2, new_list_3_v2]:
                 string_v2 += f'{new_list_v2[i]}{new_list_v2[i + 1]}{new_list_v2[i + 2]}'
                 i += 3
             else:
-                string_v2 += f'{new_list_v2[i]}{new_list_v2[i + 1]}{new_list_v2[i + 2]}_'
+                string_v2 += f'{new_list_v2[i]}{new_list_v2[i + 1]}{new_list_v2[i + 2]} '
                 i += 3
         else:
-            string_v2 += f'{new_list_v2[i]}_'
+            string_v2 += f'{new_list_v2[i]} '
             i += 1
 
     print('1. Окончательная строка:', string_v2)
