@@ -17,3 +17,6 @@ employees = ['инженер-конструктор Игорь', 'главный
 for employee in employees:
     *position, name = employee.split(' ')
     print(f'Привет, {name.upper().title()}!')
+
+# Можно было бы список position соединить методом .join в строку: ' '.join(position).
+# Тогда у нас было бы 2 строки: имя и должность, которые и можно было бы выводить на экран.
