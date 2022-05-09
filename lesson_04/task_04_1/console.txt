@@ -1,0 +1,46 @@
+C:\Users\Mr. Merde\AppData\Local\Programs\Python\Python310\Scripts>pip list
+Package    Version
+---------- -------
+pip        21.2.3
+setuptools 57.4.0
+
+
+C:\Users\Mr. Merde\AppData\Local\Programs\Python\Python310\Scripts>pip install pillow
+Collecting pillow
+  Downloading Pillow-9.1.0-cp310-cp310-win_amd64.whl (3.3 MB)
+     |████████████████████████████████| 3.3 MB 1.1 MB/s
+Installing collected packages: pillow
+Successfully installed pillow-9.1.0
+
+
+C:\Users\Mr. Merde\AppData\Local\Programs\Python\Python310\Scripts>pip list
+Package    Version
+---------- -------
+Pillow     9.1.0
+pip        21.2.3
+setuptools 57.4.0
+
+
+C:\Users\Mr. Merde\Desktop\GB_homeworks\I quarter\Basics_of_Python\lesson_04>python -m venv venv
+
+
+(venv) C:\Users\Mr. Merde\Desktop\GB_homeworks\I quarter\Basics_of_Python\lesson_04\venv\Scripts>pip list
+Package    Version
+---------- -------
+pip        21.2.3
+setuptools 57.4.0
+
+
+C:\Users\Mr. Merde\Desktop\GB_homeworks\I quarter\Basics_of_Python\lesson_04\venv\Scripts>activate.bat
+
+
+(venv) C:\Users\Mr. Merde\Desktop\GB_homeworks\I quarter\Basics_of_Python\lesson_04\venv\Scripts>pip install pillow==8.4.0
+Collecting pillow==8.4.0
+  Downloading Pillow-8.4.0-cp310-cp310-win_amd64.whl (3.2 MB)
+     |████████████████████████████████| 3.2 MB 2.2 MB/s
+Installing collected packages: pillow
+Successfully installed pillow-8.4.0
+
+
+(venv) C:\Users\Mr. Merde\Desktop\GB_homeworks\I quarter\Basics_of_Python\lesson_04\venv\Scripts>deactivate.bat
+C:\Users\Mr. Merde\Desktop\GB_homeworks\I quarter\Basics_of_Python\lesson_04\venv\Scripts>
