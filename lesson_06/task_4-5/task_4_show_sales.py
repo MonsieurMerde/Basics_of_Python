@@ -31,7 +31,9 @@ if len(argv) == 1:
             print(line.strip())
 elif argv[1] == '0':
     print('Введите номер записи, начиная с 1.')
-elif not argv[1].isdigit() or not argv[2].isdigit():
+elif not argv[1].isdigit():
+    print('Вы ввели не целое или отрицательное число.')
+elif not argv[2].isdigit():
     print('Вы ввели не целое или отрицательное число.')
 elif len(argv) > 3:
     print('Вы ввели больше двух значений.')
