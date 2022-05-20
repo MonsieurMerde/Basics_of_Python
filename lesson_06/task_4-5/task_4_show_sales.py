@@ -29,24 +29,26 @@ if len(argv) == 1:
     with open('bakery.csv', mode='r', encoding='utf-8') as f:
         for line in f:
             print(line.strip())
-elif argv[1] == '0':
-    print('Введите номер записи, начиная с 1.')
-elif not argv[1].isdigit():
-    print('Вы ввели не целое или отрицательное число.')
-elif not argv[2].isdigit():
-    print('Вы ввели не целое или отрицательное число.')
+elif len(argv) == 2:  # Вывод с одним параметром-числом можно было тоже реализовать через срез, но специально решил 2 способами.
+    if not argv[1].isdigit() or argv[1] == '0':
+        print('Вы ввели не целое или  не положительное число.')
+    else:
+        with open('bakery.csv', mode='r', encoding='utf-8') as f:
+            sales_list = f.read().strip().splitlines()
+            if int(argv[1]) > len(sales_list):
+                print('Количество записей меньше, чем вы ввели.')
+            else:
+                for sale in sales_list[int(argv[1]) - 1:]:
+                    print(sale)
+elif len(argv) == 3:
+    if not argv[1].isdigit() or not argv[2].isdigit() or argv[1] == '0':
+        print('Вы ввели не целое или  не положительное число.')
+    elif argv[1] > argv[2]:
+        print('Первый параметр больше другого.')
+    else:
+        with open('bakery.csv', mode='r', encoding='utf-8') as f:
+            f_iter = islice(f, int(argv[1]) - 1, int(argv[2]))
+            for line in f_iter:
+                print(line.strip())
 elif len(argv) > 3:
     print('Вы ввели больше двух значений.')
-elif len(argv) == 2:  # Вывод с одним параметром-числом можно было тоже реализовать через срез, но специально решил 2 способами.
-    with open('bakery.csv', mode='r', encoding='utf-8') as f:
-        sales_list = f.read().strip().splitlines()
-        if int(argv[1]) > len(sales_list):
-            print('Количество записей меньше, чем вы ввели.')
-        else:
-            for sale in sales_list[int(argv[1]) - 1:]:
-                print(sale)
-elif len(argv) == 3:
-    with open('bakery.csv', mode='r', encoding='utf-8') as f:
-        f_iter = islice(f, int(argv[1]) - 1, int(argv[2]))
-        for line in f_iter:
-            print(line.strip())
