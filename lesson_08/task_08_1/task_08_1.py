@@ -2,7 +2,7 @@ import re
 
 
 def email_parse(email_address):
-    data_email_domain = re.compile(r'''(?P<username>^[a-zA-Z0-9'._+-]+?)
+    data_email_domain = re.compile(r'''(?P<username>^[a-zA-Z\d'._+-]+?)
                                        @
                                        (?P<domain>[a-zA-Z_.-]*\.[a-zA-Z]{2})
                                        ''', re.VERBOSE)
